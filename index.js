@@ -18,7 +18,7 @@ navToggle.addEventListener("click", function() {
 
 // si la nav está abierta en mobile, al tocar fuera de la nav(en el documento en sí), que se cierre la nav
 document.addEventListener("click", function(e) {
-    if(screen.width > 500 && e.target != nav && e.target != navToggle) {
+    if(window.innerWidth < 500 && e.target != nav && e.target != navToggle) {
         nav.style.transform = "translateX(100%)";
         navToggle.style.backgroundImage = "url(assets/shared/icon-hamburger.svg)";
         nav.setAttribute("data-visible", "false");
